@@ -1,0 +1,23 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Derived output ---
+# Scoring results are regenerated from the labels; only the labels are source.
+results/
+*.tmp
+
+# --- OS / editor cruft ---
+.DS_Store
+Thumbs.db
