@@ -12,11 +12,9 @@ Data and labels only. No code, no scoring — that lives in
 
 ```
 Small_Demo/
-├── DPM89130.MP3              the dictation — Persian, code-switched with English terms
-├── 89130.jpg                 the signed report — a photo of the typed Word document
-├── labels/report/
-│   └── DPM89130.txt          the report text, transcribed from the image
-└── manifest.json             pairs them by asset_id, paths relative to this folder
+├── DPM89130.MP3     the dictation — Persian, code-switched with English terms
+├── 89130.jpg        the signed report — a photo of the typed Word document
+└── labels.csv       one row per case: the label, and what it pairs with
 ```
 
 Nine cases: `89130 · 89136 · 89151 · 89170 · 89196 · 89197 · 89247 · 89272 · 89273`.
@@ -24,26 +22,37 @@ Nine cases: `89130 · 89136 · 89151 · 89170 · 89196 · 89197 · 89247 · 8927
 Nothing about a dataset lives outside its own folder, so a folder can be moved,
 copied, zipped or mounted somewhere else and still work.
 
-## Adding a dataset
+## labels.csv
 
-Make a new folder in the same shape. Audio and images flat at the top, labels
-under `labels/report/`, and a `manifest.json` whose paths are relative to that
-folder:
+Four columns, one row per case:
 
-```json
-[{"asset_id": "DPM89130",
-  "audio": "DPM89130.MP3",
-  "image": "89130.jpg",
-  "reference": "labels/report/DPM89130.txt",
-  "reference_kind": "report"}]
+| Column | |
+|---|---|
+| `asset_id` | the audio stem — what every score is reported against |
+| `audio` | filename, relative to this folder |
+| `image` | filename of the report photo the label was read from |
+| `report` | the label: the full report text |
+
+`report` holds the report as written, line breaks and all, in a quoted CSV
+field. Any spec-compliant reader gives it back unchanged:
+
+```python
+import pandas as pd
+labels = pd.read_csv("Small_Demo/labels.csv")      # encoding is detected
 ```
 
-The audio filename carries a `DPM` prefix that the image filename does not —
-`89130.jpg` goes with `DPM89130.MP3`. `asset_id` is the audio stem, and it is
-what every score is reported against.
+Written **UTF-8 with a BOM**, so Excel opens it correctly — these labels are
+meant to be corrected in a spreadsheet. Python's `csv` and pandas both read it
+without being told.
 
-`reference_kind` records what question the label answers. Right now every label
-is `"report"`; see below for why that matters.
+## Adding a dataset
+
+A new folder in the same shape: audio and images flat at the top, one
+`labels.csv` beside them with those four columns.
+
+Watch the filenames — the audio carries a `DPM` prefix the image does not, so
+`89130.jpg` goes with `DPM89130.MP3`. Whatever generates the next `labels.csv`
+cannot assume matching stems.
 
 ## What these labels can and cannot measure
 
@@ -72,7 +81,9 @@ The clinical metrics survive the language change, because
 concept ids: `stone`, `calculus` and `سنگ` are one concept.
 
 Grading speech recognition on its own would need verbatim Persian transcripts of
-what was said. Those cannot be recovered from the images, and none exist.
+what was said. Those cannot be recovered from the images, and none exist — which
+is why `labels.csv` has a `report` column and nothing else. If transcript labels
+are ever made, they belong in a second column, not mixed into this one.
 
 ## Don't rank on word error rate either
 
