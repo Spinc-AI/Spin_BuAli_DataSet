@@ -8,19 +8,24 @@ Data and labels only. No code, no scoring — that lives in
 
 ## Layout
 
-**One folder per dataset, self-contained.** `Small_Demo/` is the first:
-
 ```
-Small_Demo/
-├── DPM89130.MP3     the dictation — Persian, code-switched with English terms
-├── 89130.jpg        the signed report — a photo of the typed Word document
-└── labels.csv       one row per case: the label, and what it pairs with
+Small_Demo/              a dataset: the audio, and the labels for it
+├── DPM89130.MP3         the dictation — Persian, code-switched with English terms
+└── labels.csv           one row per case
+
+report_images/           where the labels came from, kept for provenance
+└── 89130.jpg            a photo of the signed report on screen
 ```
 
 Nine cases: `89130 · 89136 · 89151 · 89170 · 89196 · 89197 · 89247 · 89272 · 89273`.
 
-Nothing about a dataset lives outside its own folder, so a folder can be moved,
-copied, zipped or mounted somewhere else and still work.
+A **dataset folder** holds what a benchmark run consumes: audio in, labels to
+score against. Nothing else. Copy or mount that folder and a run works.
+
+`report_images/` is source material, not dataset. The reports were read out of
+those photographs once, into `labels.csv`; nothing reads them again. They stay
+so a label can be checked against what was actually signed, and they are shared
+across datasets rather than duplicated into each.
 
 ## labels.csv
 
@@ -30,7 +35,7 @@ Four columns, one row per case:
 |---|---|
 | `asset_id` | the audio stem — what every score is reported against |
 | `audio` | filename, relative to this folder |
-| `image` | filename of the report photo the label was read from |
+| `image` | the photo the label was read from, in `report_images/` — provenance, not a path a run needs |
 | `report` | the label: the full report text |
 
 `report` holds the report as written, line breaks and all, in a quoted CSV
@@ -47,8 +52,9 @@ without being told.
 
 ## Adding a dataset
 
-A new folder in the same shape: audio and images flat at the top, one
-`labels.csv` beside them with those four columns.
+A new folder in the same shape: the audio flat at the top, one `labels.csv`
+beside it with those four columns. Report photos go into the shared
+`report_images/`, not into the dataset folder.
 
 Watch the filenames — the audio carries a `DPM` prefix the image does not, so
 `89130.jpg` goes with `DPM89130.MP3`. Whatever generates the next `labels.csv`
