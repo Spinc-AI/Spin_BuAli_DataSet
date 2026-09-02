@@ -1,64 +1,64 @@
 [
   {
     "asset_id": "DPM89130",
-    "audio": "Small_Demo/DPM89130.MP3",
-    "image": "Small_Demo/89130.jpg",
+    "audio": "DPM89130.MP3",
+    "image": "89130.jpg",
     "reference": "labels/report/DPM89130.txt",
     "reference_kind": "report"
   },
   {
     "asset_id": "DPM89136",
-    "audio": "Small_Demo/DPM89136.MP3",
-    "image": "Small_Demo/89136.jpg",
+    "audio": "DPM89136.MP3",
+    "image": "89136.jpg",
     "reference": "labels/report/DPM89136.txt",
     "reference_kind": "report"
   },
   {
     "asset_id": "DPM89151",
-    "audio": "Small_Demo/DPM89151.MP3",
-    "image": "Small_Demo/89151.jpg",
+    "audio": "DPM89151.MP3",
+    "image": "89151.jpg",
     "reference": "labels/report/DPM89151.txt",
     "reference_kind": "report"
   },
   {
     "asset_id": "DPM89170",
-    "audio": "Small_Demo/DPM89170.MP3",
-    "image": "Small_Demo/89170.jpg",
+    "audio": "DPM89170.MP3",
+    "image": "89170.jpg",
     "reference": "labels/report/DPM89170.txt",
     "reference_kind": "report"
   },
   {
     "asset_id": "DPM89196",
-    "audio": "Small_Demo/DPM89196.MP3",
-    "image": "Small_Demo/89196.jpg",
+    "audio": "DPM89196.MP3",
+    "image": "89196.jpg",
     "reference": "labels/report/DPM89196.txt",
     "reference_kind": "report"
   },
   {
     "asset_id": "DPM89197",
-    "audio": "Small_Demo/DPM89197.MP3",
-    "image": "Small_Demo/89197.jpg",
+    "audio": "DPM89197.MP3",
+    "image": "89197.jpg",
     "reference": "labels/report/DPM89197.txt",
     "reference_kind": "report"
   },
   {
     "asset_id": "DPM89247",
-    "audio": "Small_Demo/DPM89247.MP3",
-    "image": "Small_Demo/89247.jpg",
+    "audio": "DPM89247.MP3",
+    "image": "89247.jpg",
     "reference": "labels/report/DPM89247.txt",
     "reference_kind": "report"
   },
   {
     "asset_id": "DPM89272",
-    "audio": "Small_Demo/DPM89272.MP3",
-    "image": "Small_Demo/89272.jpg",
+    "audio": "DPM89272.MP3",
+    "image": "89272.jpg",
     "reference": "labels/report/DPM89272.txt",
     "reference_kind": "report"
   },
   {
     "asset_id": "DPM89273",
-    "audio": "Small_Demo/DPM89273.MP3",
-    "image": "Small_Demo/89273.jpg",
+    "audio": "DPM89273.MP3",
+    "image": "89273.jpg",
     "reference": "labels/report/DPM89273.txt",
     "reference_kind": "report"
   }

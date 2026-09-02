@@ -3,17 +3,20 @@
 Paired radiology dictations and their signed reports, and the ground truth
 labels derived from them.
 
+Each dataset is one self-contained folder. `Small_Demo/` is the first:
+
 ```
 Small_Demo/
-├── DPM89130.MP3        the dictation — Persian, code-switched with English terms
-└── 89130.jpg           the signed report — a photo of the typed Word document
-
-labels/
-├── report/DPM89130.txt transcribed from the image (done — 9 of 9)
-└── transcript/         verbatim Persian of what was said (not yet created)
-
-manifest.json           pairs everything by asset_id
+├── DPM89130.MP3            the dictation — Persian, code-switched with English terms
+├── 89130.jpg               the signed report — a photo of the typed Word document
+├── labels/
+│   ├── report/DPM89130.txt transcribed from the image (done — 9 of 9)
+│   └── transcript/         verbatim Persian of what was said (not yet created)
+└── manifest.json           pairs everything by asset_id, paths relative to this folder
 ```
+
+A new dataset is a new folder in this shape. Nothing about a dataset lives
+outside its own folder.
 
 Nine cases: `89130 · 89136 · 89151 · 89170 · 89196 · 89197 · 89247 · 89272 · 89273`.
 
@@ -48,8 +51,8 @@ negation, laterality and units compare across the two languages as they stand.
 
 | | What it is | Scores | Status |
 |---|---|---|---|
-| **Report truth** | `labels/report/` — the signed English report | the **whole pipeline**: audio → final report | ✅ 9 of 9 |
-| **Transcript truth** | `labels/transcript/` — verbatim Persian of what was said | the **STT stage alone** | ❌ none yet |
+| **Report truth** | `<dataset>/labels/report/` — the signed English report | the **whole pipeline**: audio → final report | ✅ 9 of 9 |
+| **Transcript truth** | `<dataset>/labels/transcript/` — verbatim Persian | the **STT stage alone** | ❌ none yet |
 
 The benchmark in `Spin_BuAli/benchmark/` compares STT models against each other.
 That needs transcript truth. Report truth cannot substitute for it.
@@ -98,8 +101,8 @@ The manifest is the format `Spin_BuAli/benchmark/` reads:
 
 ```json
 {"asset_id": "DPM89130",
- "audio": "Small_Demo/DPM89130.MP3",
- "image": "Small_Demo/89130.jpg",
+ "audio": "DPM89130.MP3",
+ "image": "89130.jpg",
  "reference": "labels/report/DPM89130.txt",
  "reference_kind": "report"}
 ```
