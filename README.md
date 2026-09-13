@@ -29,7 +29,7 @@ across datasets rather than duplicated into each.
 
 ## labels.csv
 
-Four columns, one row per case:
+Six columns, one row per case:
 
 | Column | |
 |---|---|
@@ -37,6 +37,18 @@ Four columns, one row per case:
 | `audio` | filename, relative to this folder |
 | `image` | the photo the label was read from, in `report_images/` — provenance, not a path a run needs |
 | `report` | the label: the full report text |
+| `modality` | the imaging technique, e.g. `Ultrasound` — see `Spin_BuAli/docs/taxonomy/modalities.csv` for the reference vocabulary |
+| `region` | body region(s) examined, `;`-separated when more than one, e.g. `Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Male)` — see `Spin_BuAli/docs/taxonomy/body_regions.csv` |
+
+`modality`/`region` are known context about the recording -- what a real order
+would say -- not something inferred from the audio or report. Fed to the LLM
+as a prompt line by `Spin_BuAli/benchmark/context_labels.py`, for both the
+`separate` and `multimodal` pipelines. All nine cases here are `Ultrasound`;
+`region` differs per case because the exam covers different organs depending
+on the patient's sex (`Genitourinary (Male)` vs `Genitourinary (Female)`) and,
+for case 89136, whether the pelvic organs were examined at all (that case's
+report has no prostate/uterus section, only a note on a VP-shunt-site fluid
+collection — tagged `Abdomen` instead).
 
 `report` holds the report as written, line breaks and all, in a quoted CSV
 field. Any spec-compliant reader gives it back unchanged:
@@ -53,8 +65,11 @@ without being told.
 ## Adding a dataset
 
 A new folder in the same shape: the audio flat at the top, one `labels.csv`
-beside it with those four columns. Report photos go into the shared
-`report_images/`, not into the dataset folder.
+beside it with those columns. Report photos go into the shared
+`report_images/`, not into the dataset folder. `modality`/`region` are
+optional -- a `labels.csv` without them still loads fine (see
+`Spin_BuAli/benchmark/dataset.py`'s `from_csv`), they just mean no context
+line reaches the LLM for that dataset.
 
 Watch the filenames — the audio carries a `DPM` prefix the image does not, so
 `89130.jpg` goes with `DPM89130.MP3`. Whatever generates the next `labels.csv`

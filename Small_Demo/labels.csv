@@ -1,4 +1,4 @@
-﻿asset_id,audio,image,report
+﻿asset_id,audio,image,report,modality,region
 DPM89130,DPM89130.MP3,89130.jpg,"ABDOMINAL AND PELVIC RETROPERITONEAL ULTRASONOGRAPHY:
 Liver has normal size and homogenous parenchymal echo with no S.O.L. .
 Hepatic and portosplenic venous system have normal diameter.
@@ -15,7 +15,7 @@ No ascites or fluid collection is seen.
 Prostate has normal size and volume = 23 cc , with homogenous echo with no S.O.L.
 Seminal vessicles appear normal .
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Male)
 DPM89136,DPM89136.MP3,89136.jpg,"ABDOMINAL AND PELVIC AND RETROPERITONEAL SONOGRAPHY :
 Liver has normal size with mild uniform increased parenchymal echo with no S.O.L. ,in favor of grade 1 fatty liver.
 Hepatic and portosplenic venous system have normal diameter.
@@ -30,7 +30,7 @@ Prostate has normal size and volume = 21 cc , with homogenous echo with no S.O.L
 Seminal vessicles appear normal.
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
 Minimal free fluid was seen in abdominopelvic cavity and there is 53x26mm lobulated border confined area of fluid collection with few septa in abdominal cavity at the level of umbilicus in favor of fluid collection around the site of VP-shunt however F/U the patient is recommended
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Abdomen
 DPM89151,DPM89151.MP3,89151.jpg,"ABDOMINAL AND PELVIC RETROPERITONEAL ULTRASONOGRAPHY:
 Liver has normal size and homogenous parenchymal echo with no S.O.L. .
 Hepatic and portosplenic venous system have normal diameter.
@@ -49,7 +49,7 @@ Prostate is significantly enlarged , measuring about ( 50x56x66mm) , volume =98 
 Seminal vessicles appear normal .
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
 PVR =10cc.
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Male)
 DPM89170,DPM89170.MP3,89170.jpg,"ABDOMINAL AND PELVIC AND RETROPERITONEAL SONOGRAPHY :
 Liver has normal size with mild to moderate uniform increased parenchymal echo with no S.O.L. ,in favor of grade 1-2 fatty liver.
 Hepatic and portosplenic venous system have normal diameter.
@@ -64,7 +64,7 @@ There is no ascites.
 Prostate has normal size and volume = 18 cc , with homogenous echo with no S.O.L
 Seminal vessicles appear normal.
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Male)
 DPM89196,DPM89196.MP3,89196.jpg,"ABDOMINAL AND PELVIC AND RETROPERITONEAL ULTRASONOGRAPHY :
 Liver has normal size and homogenous parenchymal echo .
 There is 22x21mm echogenic lesion at postero-inferior segment (segment 6) , a 16x9mm same lesion at antero-inferior segment (segment 5) of right hepatic lobe & another 9x7mm same lesion in left hepatic lobe more in favor of hemangiomas .
@@ -84,7 +84,7 @@ Left ovary has normal size and echo texture with no cystic or solid mass lesion 
 Right ovary was not seen due to previous resection .
 There is no abdominal mass or ascites.
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Female)
 DPM89197,DPM89197.MP3,89197.jpg,"ABDOMINAL AND PELVIC & RETROPERITONEAL ULTRASONOGRAPHY :
 Liver has normal size with mild to moderate uniform increased parenchymal echo with no S.O.L. in favor of grade 1-2 fatty liver.
 Hepatic and portosplenic venous system have normal diameter.
@@ -103,7 +103,7 @@ Ovaries have normal size and echo texture with no cystic or solid mass lesion .
 There is no abdominal mass or ascites.
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
 There is no definite sonographic sign of appendicitis at this time however correlation with lab data and physical examination is recommended .
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Female)
 DPM89247,DPM89247.MP3,89247.jpg,"ABDOMINAL AND PELVIC & RETROPERITONEAL ULTRASONOGRAPHY :
 Liver has normal size with mild to moderate uniform increased parenchymal echo with no S.O.L. in favor of grade 1-2 fatty liver.
 Hepatic and portosplenic venous system have normal diameter.
@@ -119,7 +119,7 @@ U.bladder is normal with no stone or mass lesion but contain some echogenic debr
 Uterus and ovaries are small with no solid or cystic mass was seen.
 There is no abdominal mass or ascites.
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Female)
 DPM89272,DPM89272.MP3,89272.jpg,"ABDOMINAL AND PELVIC RETROPERITONEAL ULTRASONOGRAPHY:
 Liver has normal size and homogenous parenchymal echo with no S.O.L.
 Hepatic and portosplenic venous system have normal diameter.
@@ -139,7 +139,7 @@ No ascites or fluid collection is seen.
 Prostate is enlarged , measuring about ( 48x62x50mm) , volume = 80 cc , with heterogenous echo with no S.O.L. There is hypertrophy of central gland , which protrude to bladder base , in favor of B.P.H. correlation with PSA and FNA is recommended .
 Seminal vessicles appear normal .
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Male)
 DPM89273,DPM89273.MP3,89273.jpg,"ABDOMINAL AND PELVIC RETROPERITONEAL ULTRASONOGRAPHY:
 Liver has normal size and homogenous parenchymal echo with no S.O.L. .
 Hepatic and portosplenic venous system have normal diameter.
@@ -157,4 +157,4 @@ No ascites or fluid collection is seen.
 Prostate is significantly enlarged , measuring about ( 74x69x80mm) , volume = 212 cc , with lobulated border and heterogenous parenchymal echogenicity & bulging into the base of urinary bladder in favor of B.P.H. however correlation with PSA & FNA for R/O malignant lesion is recommended .
 Seminal vessicles appear normal .
 There is no definite sign of mass or collection in visualized part of retroperitoneal space.
-"
+",Ultrasound,Hepatobiliary;Retroperitoneum;Bladder;Genitourinary (Male)
