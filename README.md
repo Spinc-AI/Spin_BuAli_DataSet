@@ -10,7 +10,7 @@ Data and labels only. No code, no scoring — that lives in
 
 ```
 Small_Demo/              a dataset: the audio, and the labels for it
-├── DPM89130.MP3         the dictation — Persian, code-switched with English terms
+├── DPM89130.MP3         the dictation — mostly English, with Persian words mixed in
 └── labels.csv           one row per case
 
 report_images/           where the labels came from, kept for provenance
@@ -78,7 +78,7 @@ cannot assume matching stems.
 ## What these labels can and cannot measure
 
 **The audio and the images are not the same text, and not the same language.**
-The dictation is Persian with English radiology terms mixed in. The signed
+The dictation is mostly English, with Persian words mixed in. The signed
 report is entirely English, restructured into house template order.
 
 So these labels grade **the whole pipeline** — audio in, finished report out.
